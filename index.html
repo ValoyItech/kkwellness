@@ -1,0 +1,2241 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KK Wellness Botanics - Premium Botanical Supplements</title>
+
+<!-- MAIN SEO -->
+<meta name="title" content="KK Wellness Botanics - Premium Botanical Supplements" />
+<meta name="description" content="Premium botanical supplements including collagen, maca, ashwagandha, soursop, fenugreek, and dandelion. Natural wellness products delivered throughout South Africa." />
+<meta name="keywords" content="KK Wellness Botanics, botanical supplements, collagen powder, maca powder, ashwagandha, soursop, herbal wellness, natural supplements South Africa" />
+<meta name="author" content="KK Wellness Botanics" />
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="images/logo.png" />
+
+<!-- OPEN GRAPH / SOCIAL SHARING -->
+<meta property="og:title" content="KK Wellness Botanics - Premium Botanical Supplements" />
+<meta property="og:description" content="Explore high-quality botanical supplements for natural wellness and vitality." />
+<meta property="og:image" content="images/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://your-domain.co.za/" />
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="KK Wellness Botanics - Premium Botanical Supplements" />
+<meta name="twitter:description" content="Premium botanical and herbal supplements for natural wellness." />
+<meta name="twitter:image" content="images/logo.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KK Wellness Botanics",
+  "url": "https://your-domain.co.za/",
+  "logo": "https://your-domain.co.za/images/logo.png",
+  "description": "Premium botanical supplements supporting natural wellness.",
+  "sameAs": [
+    "https://www.instagram.com/kk_wellness_botanics/",
+    "https://www.tiktok.com/@kk.wellness.botan"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+27 81 022 2851",
+    "contactType": "customer support",
+    "areaServed": "ZA"
+  }]
+}
+</script>
+
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      color: #2c3e2c;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Header */
+    header {
+      background: #6b7d5c;
+      padding: 1.5rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #f5f5dc;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .desktop-nav a {
+      color: #f5f5dc;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .desktop-nav a:hover {
+      color: #d4af37;
+    }
+
+    .cart-icon-wrapper {
+      position: relative;
+      cursor: pointer;
+      color: #f5f5dc;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .cart-icon-wrapper:hover {
+      color: #d4af37;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #d4af37;
+      color: #2c3e2c;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #f5f5dc;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .mobile-cart-icon {
+      display: none;
+      position: relative;
+    }
+
+    /* Mobile Sidebar */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1999;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100%;
+      background: #2c3e2c;
+      z-index: 2000;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar-header {
+      padding: 2rem;
+      border-bottom: 1px solid #6b7d5c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sidebar-header h3 {
+      color: #d4af37;
+      margin: 0;
+    }
+
+    .sidebar-close {
+      background: none;
+      border: none;
+      color: #f5f5dc;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .sidebar-nav {
+      padding: 1rem 0;
+    }
+
+    .sidebar-nav a {
+      display: block;
+      color: #f5f5dc;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      transition: background 0.3s;
+    }
+
+    .sidebar-nav a:hover {
+      background: #6b7d5c;
+      color: #d4af37;
+    }
+
+    /* Hero Slider */
+    .hero-slider {
+      margin-top: 80px;
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(107, 125, 92, 0.8), rgba(212, 175, 55, 0.6));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .slide-content {
+      color: #f5f5dc;
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .slide-content h1 {
+      font-size: 3.5rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .slide-content p {
+      font-size: 1.5rem;
+      margin: 0 0 2rem 0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .cta-button {
+      background: #d4af37;
+      color: #2c3e2c;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background: #f5f5dc;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(245, 245, 220, 0.5);
+      border: 2px solid #f5f5dc;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .slider-dot.active {
+      background: #d4af37;
+      border-color: #d4af37;
+    }
+
+    /* Page Container */
+    .page {
+      display: none;
+      min-height: calc(100% - 80px);
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 5rem 2rem;
+      background: #f5f5dc;
+      text-align: center;
+    }
+
+    .about-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      color: #6b7d5c;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #2c3e2c;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
+
+    /* Products Section */
+    .products-section {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      min-height: 100%;
+    }
+
+    .products-section .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .products-section h2 {
+      font-size: 2.5rem;
+      color: #6b7d5c;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: #f5f5dc;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #6b7d5c, #8a9b7a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #f5f5dc;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-size: 1.5rem;
+      color: #2c3e2c;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .product-price {
+      font-size: 1.8rem;
+      color: #d4af37;
+      font-weight: bold;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .product-info p {
+      color: #6b7d5c;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .add-to-cart-btn {
+      background: #6b7d5c;
+      color: #f5f5dc;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #d4af37;
+      color: #2c3e2c;
+    }
+
+    /* Product Detail Page */
+    .product-detail {
+      padding: 8rem 2rem 5rem 2rem;
+      background: #ffffff;
+      min-height: 100%;
+    }
+
+    .product-detail .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      color: #6b7d5c;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .back-btn:hover {
+      color: #d4af37;
+    }
+
+    .product-detail-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .product-detail-image {
+      background: linear-gradient(135deg, #6b7d5c, #8a9b7a);
+      border-radius: 20px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+      color: #f5f5dc;
+    }
+
+    .product-detail-info h1 {
+      font-size: 2.5rem;
+      color: #2c3e2c;
+      margin: 0 0 1rem 0;
+    }
+
+    .product-detail-price {
+      font-size: 2.5rem;
+      color: #d4af37;
+      font-weight: bold;
+      margin: 1rem 0 2rem 0;
+    }
+
+    .product-detail-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #6b7d5c;
+      margin-bottom: 2rem;
+    }
+
+    .product-usage {
+      background: #f5f5dc;
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+    }
+
+    .product-usage h3 {
+      color: #6b7d5c;
+      margin: 0 0 1rem 0;
+    }
+
+    .product-usage p {
+      color: #2c3e2c;
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .quantity-selector label {
+      font-size: 1.1rem;
+      color: #2c3e2c;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #f5f5dc;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+    }
+
+    .quantity-btn {
+      background: #6b7d5c;
+      color: #f5f5dc;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .quantity-btn:hover {
+      background: #d4af37;
+      color: #2c3e2c;
+    }
+
+    .quantity-value {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2c3e2c;
+      min-width: 30px;
+      text-align: center;
+    }
+
+    /* Contact Page */
+    .contact-section {
+      padding: 8rem 2rem 5rem 2rem;
+      background: #f5f5dc;
+      min-height: 100%;
+    }
+
+    .contact-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      color: #6b7d5c;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-card i {
+      font-size: 3rem;
+      color: #d4af37;
+      margin-bottom: 1rem;
+    }
+
+    .contact-card h3 {
+      color: #6b7d5c;
+      margin: 0 0 1rem 0;
+    }
+
+    .contact-card p {
+      color: #2c3e2c;
+      margin: 0.5rem 0;
+    }
+
+    .contact-card a {
+      color: #6b7d5c;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-card a:hover {
+      color: #d4af37;
+    }
+
+    /* Cart Sidebar */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 450px;
+      height: 100%;
+      background: #ffffff;
+      z-index: 2000;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-sidebar.active {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 2rem;
+      border-bottom: 2px solid #f5f5dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #6b7d5c;
+      color: #f5f5dc;
+    }
+
+    .cart-header h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .cart-close {
+      background: none;
+      border: none;
+      color: #f5f5dc;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f5f5dc;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .cart-item-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #6b7d5c, #8a9b7a);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f5dc;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-name {
+      font-weight: bold;
+      color: #2c3e2c;
+      margin-bottom: 0.5rem;
+    }
+
+    .cart-item-price {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .cart-item-quantity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .cart-item-quantity button {
+      background: #6b7d5c;
+      color: #f5f5dc;
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    .cart-item-quantity button:hover {
+      background: #d4af37;
+      color: #2c3e2c;
+    }
+
+    .cart-item-remove {
+      background: none;
+      border: none;
+      color: #6b7d5c;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .cart-item-remove:hover {
+      color: #d4af37;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #6b7d5c;
+    }
+
+    .cart-empty i {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .cart-footer {
+      padding: 1.5rem 2rem;
+      border-top: 2px solid #f5f5dc;
+      background: #ffffff;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .cart-total-label {
+      color: #2c3e2c;
+      font-weight: bold;
+    }
+
+    .cart-total-amount {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      background: #6b7d5c;
+      color: #f5f5dc;
+      padding: 1rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .checkout-btn:hover {
+      background: #d4af37;
+      color: #2c3e2c;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #6b7d5c;
+      color: #f5f5dc;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      animation: slideIn 0.3s ease;
+    }
+
+    .toast.show {
+      display: flex;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e2c;
+      color: #f5f5dc;
+      padding: 3rem 2rem 1rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .footer-section p, .footer-section a {
+      color: #f5f5dc;
+      text-decoration: none;
+      line-height: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-section a:hover {
+      color: #d4af37;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      background: #6b7d5c;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #d4af37;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #6b7d5c;
+      color: #8a9b7a;
+    }
+
+    /* Info Section */
+    .info-section {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      min-height: 100%;
+    }
+
+    .info-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .info-section h2 {
+      font-size: 2.5rem;
+      color: #6b7d5c;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .info-cards {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .info-card {
+      background: #f5f5dc;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .info-card h3 {
+      color: #6b7d5c;
+      margin: 0 0 1rem 0;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .info-card h3 i {
+      color: #d4af37;
+    }
+
+    .info-card h4 {
+      color: #2c3e2c;
+      margin: 1.5rem 0 0.75rem 0;
+      font-size: 1.3rem;
+    }
+
+    .info-card p, .info-card ul {
+      color: #2c3e2c;
+      line-height: 1.8;
+      margin: 0.75rem 0;
+    }
+
+    .info-card ul {
+      padding-left: 1.5rem;
+    }
+
+    .info-card li {
+      margin: 0.5rem 0;
+    }
+
+    .info-highlight {
+      background: #d4af37;
+      color: #2c3e2c;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      font-weight: bold;
+    }
+
+    .info-note {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #6b7d5c;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .mobile-cart-icon {
+        display: flex;
+      }
+
+      .desktop-nav .cart-icon-wrapper {
+        display: none;
+      }
+
+      .slide-content h1 {
+        font-size: 2rem;
+      }
+
+      .slide-content p {
+        font-size: 1.1rem;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-detail-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .product-detail-image {
+        height: 300px;
+        font-size: 5rem;
+      }
+
+      .cart-sidebar {
+        width: 100%;
+        right: -100%;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #shop-page .products-section {
+    margin-top: 120px;
+}
+
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 5rem 2rem;
+  background: #f5f5dc;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  color: #6b7d5c;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-style: italic;
+  color: #2c3e2c;
+  line-height: 1.8;
+}
+
+.testimonial-card strong {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  color: #d4af37;
+}
+
+.about-section img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.about-section img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+
+.hero-logo {
+    width: 120px;
+    margin: 0 auto 15px auto;
+    display: block;
+    opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.95))
+            drop-shadow(0 0 5px rgba(255,255,255,0.8));
+}
+
+
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header>
+   <div class="header-content">
+<div class="logo" onclick="navigateTo('home')">
+  <img src="images/header.png" alt="KK Wellness Botanics Logo" style="height:45px; width:auto;">
+</div>
+
+    <nav class="desktop-nav"><a href="#" onclick="navigateTo('home'); return false;">Home</a> <a href="#" onclick="navigateTo('shop'); return false;">Shop</a> <a href="#" onclick="navigateTo('about'); return false;">About</a> <a href="#" onclick="navigateTo('info'); return false;">Policies</a> <a href="#" onclick="navigateTo('contact'); return false;">Contact</a>
+     <div class="cart-icon-wrapper" onclick="toggleCart()"><i class="fas fa-shopping-bag"></i> <span class="cart-count" id="cart-count">0</span>
+     </div>
+    </nav>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+     <div class="cart-icon-wrapper mobile-cart-icon" onclick="toggleCart()"><i class="fas fa-shopping-bag"></i> <span class="cart-count" id="mobile-cart-count">0</span>
+     </div><button class="mobile-menu-btn" onclick="toggleSidebar()"> <i class="fas fa-bars"></i> </button>
+    </div>
+   </div>
+  </header><!-- Mobile Sidebar -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+  <div class="sidebar" id="sidebar">
+   <div class="sidebar-header">
+    <h3>Menu</h3><button class="sidebar-close" onclick="toggleSidebar()"> <i class="fas fa-times"></i> </button>
+   </div>
+   <nav class="sidebar-nav"><a href="#" onclick="navigateTo('home'); toggleSidebar(); return false;"> <i class="fas fa-home"></i> Home </a> <a href="#" onclick="navigateTo('shop'); toggleSidebar(); return false;"> <i class="fas fa-store"></i> Shop </a> <a href="#" onclick="navigateTo('about'); toggleSidebar(); return false;"> <i class="fas fa-info-circle"></i> About </a> <a href="#" onclick="navigateTo('info'); toggleSidebar(); return false;"> <i class="fas fa-file-alt"></i> Policies </a> <a href="#" onclick="navigateTo('contact'); toggleSidebar(); return false;"> <i class="fas fa-envelope"></i> Contact </a>
+   </nav>
+  </div><!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+   <div class="cart-header">
+    <h3>Your Cart</h3><button class="cart-close" onclick="toggleCart()"> <i class="fas fa-times"></i> </button>
+   </div>
+   <div class="cart-items" id="cart-items">
+    <div class="cart-empty"><i class="fas fa-shopping-bag"></i>
+     <p>Your cart is empty</p>
+    </div>
+   </div>
+   <div class="cart-footer" id="cart-footer" style="display: none;">
+    <div class="cart-total"><span class="cart-total-label">Total:</span> <span class="cart-total-amount" id="cart-total">R0.00</span>
+    </div><button class="checkout-btn" onclick="checkoutWhatsApp()"> <i class="fab fa-whatsapp"></i> Checkout via WhatsApp </button>
+   </div>
+  </div><!-- Toast Notification -->
+  <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toast-message"></span>
+  </div><!-- HOME PAGE -->
+  <div class="page active" id="home-page"><!-- Hero Slider -->
+   <section class="hero-slider">
+    <div class="slide active" style="background-image: url('images/hero1.jpg');">
+     <div class="slide-overlay">
+      <div class="slide-content">
+        <img src="images/body.png" alt="KK Wellness Botanics Logo" class="hero-logo">
+       <h1 id="hero-title">Natural Wellness, Naturally You</h1>
+       <p id="hero-subtitle">Premium botanical supplements for your health journey</p><button class="cta-button" onclick="navigateTo('shop')">Shop Now</button>
+      </div>
+     </div>
+    </div>
+    <div class="slide" style="background-image: url('images/hero2.jpg');">
+     <div class="slide-overlay">
+      <div class="slide-content">
+        <img src="images/body.png" alt="KK Wellness Botanics Logo" class="hero-logo">
+       <h1>Pure Botanical Power</h1>
+       <p>Harnessing nature's finest ingredients for optimal wellness</p><button class="cta-button" onclick="navigateTo('shop')">Explore Products</button>
+      </div>
+     </div>
+    </div>
+    <div class="slide" style="background-image: url('images/hero3.jpg');">
+     <div class="slide-overlay">
+      <div class="slide-content">
+        <img src="images/body.png" alt="KK Wellness Botanics Logo" class="hero-logo">
+       <h1>Your Health, Our Mission</h1>
+       <p>Quality botanicals sourced with care and delivered with love</p><button class="cta-button" onclick="navigateTo('contact')">Get in Touch</button>
+      </div>
+     </div>
+    </div>
+    <div class="slider-controls"><span class="slider-dot active" data-slide="0"></span> <span class="slider-dot" data-slide="1"></span> <span class="slider-dot" data-slide="2"></span>
+    </div>
+   </section>
+
+<section class="about-section">
+    <div class="container">
+     <h2 id="about-title-preview">Welcome to KK Wellness Botanics</h2>
+     <p id="about-text-preview">At KK Wellness Botanics, we believe in the power of nature to support your wellness journey. Our carefully selected range of botanical supplements combines traditional wisdom with modern quality standards.</p><button class="cta-button" onclick="navigateTo('about')">Learn More About Us</button>
+    </div>
+   </section>
+
+   <section class="products-section">
+    <div class="container">
+     <h2 id="products-title-home">Our Premium Products</h2>
+     <div class="products-grid" id="products-grid-home"></div>
+     <div style="text-align: center; margin-top: 3rem;"><button class="cta-button" onclick="navigateTo('shop')">View All Products</button>
+     </div>
+    </div>
+   </section><!-- About Preview -->
+
+
+   <!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>“I’ve been using the collagen powder for a month now and I can already feel the difference. My skin feels smoother and I love how easy it is to mix into my morning smoothie!”</p>
+        <strong>- Thandi M.</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>“The soursop capsules are amazing! I take them daily and they’ve become a key part of my wellness routine. Highly recommend KK Wellness Botanics.”</p>
+        <strong>- Johan P.</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>“Great quality products and even better service. The team is super helpful and the delivery was fast. Will definitely order again!”</p>
+        <strong>- Nomsa K.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+   
+   <footer>
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KK Wellness Botanics</h3>
+      <p id="footer-tagline">Your trusted source for premium botanical supplements</p>
+      <div class="social-links"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> 081 022 2851</p>
+      <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Business Hours</h3>
+      <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 6PM</p>
+      <p><i class="fas fa-clock"></i> Saturday: 9AM - 2PM</p>
+      <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KK Wellness Botanics. All rights reserved.</p>
+    </div>
+   </footer>
+  </div><!-- SHOP PAGE -->
+  <div class="page" id="shop-page">
+   <section class="products-section">
+    <div class="container">
+     <h2 id="products-title">Our Premium Products</h2>
+     <div class="products-grid" id="products-grid"></div>
+    </div>
+   </section>
+   <footer>
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KK Wellness Botanics</h3>
+      <p>Your trusted source for premium botanical supplements</p>
+      <div class="social-links"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> 081 022 2851</p>
+      <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Business Hours</h3>
+      <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 6PM</p>
+      <p><i class="fas fa-clock"></i> Saturday: 9AM - 2PM</p>
+      <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KK Wellness Botanics. All rights reserved.</p>
+    </div>
+   </footer>
+  </div><!-- PRODUCT DETAIL PAGE -->
+  <div class="page" id="product-detail-page">
+   <section class="product-detail">
+    <div class="container"><button class="back-btn" onclick="navigateTo('shop')"> <i class="fas fa-arrow-left"></i> Back to Shop </button>
+     <div class="product-detail-content" id="product-detail-content"></div>
+    </div>
+   </section>
+   <footer>
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KK Wellness Botanics</h3>
+      <p>Your trusted source for premium botanical supplements</p>
+      <div class="social-links"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> 081 022 2851</p>
+      <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Business Hours</h3>
+      <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 6PM</p>
+      <p><i class="fas fa-clock"></i> Saturday: 9AM - 2PM</p>
+      <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KK Wellness Botanics. All rights reserved.</p>
+    </div>
+   </footer>
+  </div><!-- ABOUT PAGE -->
+  <div class="page" id="about-page">
+   <section class="about-section" style="padding-top: 8rem; min-height: 100%;">
+    <div class="container">
+
+   <!-- Transparent Logo -->
+<div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+  <img src="images/body.png" alt="KK Wellness Botanics Logo" style="max-width: 200px; width: 100%; height: auto; opacity: 0.9;">
+</div>
+    
+
+     <h2 id="about-title">About KK Wellness Botanics</h2>
+     <p id="about-text">At KK Wellness Botanics, we believe in the power of nature to support your wellness journey. Our carefully selected range of botanical supplements combines traditional wisdom with modern quality standards. Based in Pretoria, Gauteng, we're committed to providing you with pure, natural products that help you feel your best every day.</p>
+     <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+      <div style="text-align: center;"><i class="fas fa-leaf" style="font-size: 3rem; color: #d4af37; margin-bottom: 1rem;"></i>
+       <h3 style="color: #6b7d5c; margin-bottom: 0.5rem;">100% Natural</h3>
+       <p style="color: #2c3e2c;">Pure botanical ingredients sourced from nature</p>
+      </div>
+      <div style="text-align: center;"><i class="fas fa-certificate" style="font-size: 3rem; color: #d4af37; margin-bottom: 1rem;"></i>
+       <h3 style="color: #6b7d5c; margin-bottom: 0.5rem;">Quality Assured</h3>
+       <p style="color: #2c3e2c;">Highest quality standards in every product</p>
+      </div>
+      <div style="text-align: center;"><i class="fas fa-heart" style="font-size: 3rem; color: #d4af37; margin-bottom: 1rem;"></i>
+       <h3 style="color: #6b7d5c; margin-bottom: 0.5rem;">Made with Care</h3>
+       <p style="color: #2c3e2c;">Carefully crafted for your wellness journey</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <footer>
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KK Wellness Botanics</h3>
+      <p>Your trusted source for premium botanical supplements</p>
+      <div class="social-links"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> 081 022 2851</p>
+      <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Business Hours</h3>
+      <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 6PM</p>
+      <p><i class="fas fa-clock"></i> Saturday: 9AM - 2PM</p>
+      <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KK Wellness Botanics. All rights reserved.</p>
+    </div>
+   </footer>
+  </div><!-- INFO PAGE -->
+  <div class="page" id="info-page">
+   <section class="info-section" style="padding-top: 8rem;">
+    <div class="container">
+     <h2>Shipping, Returns &amp; Order Information</h2>
+     <div class="info-cards"><!-- Shipping Information -->
+      <div class="info-card">
+       <h3><i class="fas fa-shipping-fast"></i> Shipping Information</h3>
+       <h4>Delivery Areas</h4>
+       <p>We currently deliver throughout South Africa, with a primary focus on Gauteng and surrounding provinces.</p>
+       <h4>Shipping Methods</h4>
+       <ul>
+        <li><strong>Standard Delivery:</strong> 3-5 business days</li>
+        <li><strong>Express Delivery:</strong> 1-2 business days (select areas)</li>
+        <li><strong>Local Pickup:</strong> Available in Pretoria</li>
+       </ul>
+       <h4>Shipping Costs</h4>
+       <p>Shipping costs are calculated based on your location and order size. Free shipping is available on orders over R500 within Gauteng.</p>
+       <div class="info-note"><strong>Note:</strong> Orders are processed within 24 hours on business days. You will receive a tracking number once your order has been dispatched.
+       </div>
+      </div><!-- Return Policy -->
+      <div class="info-card">
+       <h3><i class="fas fa-undo-alt"></i> Return Policy</h3>
+       <h4>30-Day Return Guarantee</h4>
+       <p>We want you to be completely satisfied with your purchase. If you're not happy with your order, you can return it within 30 days of receipt.</p>
+       <h4>Return Conditions</h4>
+       <ul>
+        <li>Products must be unopened and in original packaging</li>
+        <li>Seals must be intact and unbroken</li>
+        <li>Returns must be initiated within 30 days of delivery</li>
+        <li>Proof of purchase (order number) is required</li>
+       </ul>
+       <h4>How to Return</h4>
+       <p>Contact us via WhatsApp at <strong>081 022 2851</strong> with your order number and reason for return. Our team will guide you through the return process.</p>
+       <div class="info-highlight"><i class="fas fa-check-circle"></i> Full refund issued once returned product is received and inspected
+       </div>
+       <h4>Non-Returnable Items</h4>
+       <ul>
+        <li>Opened or used products (for hygiene and safety reasons)</li>
+        <li>Products damaged due to misuse</li>
+       </ul>
+      </div><!-- Order Instructions -->
+      <div class="info-card">
+       <h3><i class="fas fa-clipboard-list"></i> How to Order</h3>
+       <h4>Step 1: Browse Products</h4>
+       <p>Explore our range of premium botanical supplements and select the products that suit your wellness needs.</p>
+       <h4>Step 2: Add to Cart</h4>
+       <p>Click "Add to Cart" on any product. You can adjust quantities in your cart before checkout.</p>
+       <h4>Step 3: Checkout via WhatsApp</h4>
+       <p>Click the "Checkout via WhatsApp" button in your cart. This will open a WhatsApp message with your order details.</p>
+       <div class="info-note">
+        Your order message will include: 
+        <ul>
+         <li>Product names and quantities</li>
+         <li>Total order amount</li>
+        </ul>
+       </div>
+       <h4>Step 4: Confirm Your Order</h4>
+       <p>Send the WhatsApp message to complete your order. Our team will respond with:</p>
+       <ul>
+        <li>Payment instructions</li>
+        <li>Delivery details and shipping costs</li>
+        <li>Estimated delivery timeframe</li>
+       </ul>
+       <h4>Step 5: Make Payment</h4>
+       <p>We accept various payment methods including bank transfer and instant EFT. Payment details will be provided via WhatsApp.</p>
+       <div class="info-highlight"><i class="fas fa-lock"></i> Your order will be processed immediately upon payment confirmation
+       </div>
+      </div><!-- Additional Information -->
+      <div class="info-card">
+       <h3><i class="fas fa-question-circle"></i> Additional Information</h3>
+       <h4>Product Quality</h4>
+       <p>All our botanical supplements are sourced from trusted suppliers and meet high quality standards. Each product is carefully selected to ensure purity and effectiveness.</p>
+       <h4>Storage Instructions</h4>
+       <p>Store products in a cool, dry place away from direct sunlight. Keep containers tightly closed when not in use.</p>
+       <h4>Contact &amp; Support</h4>
+       <p>For any questions about your order, products, or our policies, please contact us:</p>
+       <ul>
+        <li><strong>WhatsApp:</strong> 081 022 2851</li>
+        <li><strong>Phone:</strong> 081 022 2851</li>
+        <li><strong>Hours:</strong> Mon-Fri 9AM-6PM, Sat 9AM-2PM</li>
+       </ul>
+       <div class="info-note"><strong>Disclaimer:</strong> These products are not intended to diagnose, treat, cure, or prevent any disease. Please consult with a healthcare professional before starting any new supplement regimen.
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <footer>
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KK Wellness Botanics</h3>
+      <p>Your trusted source for premium botanical supplements</p>
+      <div class="social-links"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> 081 022 2851</p>
+      <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Business Hours</h3>
+      <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 6PM</p>
+      <p><i class="fas fa-clock"></i> Saturday: 9AM - 2PM</p>
+      <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KK Wellness Botanics. All rights reserved.</p>
+    </div>
+   </footer>
+  </div><!-- CONTACT PAGE -->
+  <div class="page" id="contact-page">
+   <section class="contact-section">
+    <div class="container">
+     <h2>Get In Touch</h2>
+     <p style="text-align: center; font-size: 1.1rem; color: #6b7d5c; margin-bottom: 3rem;">We'd love to hear from you! Reach out through any of these channels.</p>
+     <div class="contact-grid">
+      <div class="contact-card"><i class="fas fa-phone"></i>
+       <h3>Call Us</h3>
+       <p>Orders &amp; Inquiries</p><a href="tel:0810222851">081 022 2851</a>
+      </div>
+      <div class="contact-card"><i class="fab fa-whatsapp"></i>
+       <h3>WhatsApp</h3>
+       <p>Quick responses</p><a href="https://wa.me/27810222851" target="_blank" rel="noopener noreferrer">+27 81 022 2851</a>
+      </div>
+      <div class="contact-card"><i class="fas fa-map-marker-alt"></i>
+       <h3>Location</h3>
+       <p>Pretoria</p>
+       <p>Gauteng, South Africa</p>
+      </div>
+      <div class="contact-card"><i class="fas fa-clock"></i>
+       <h3>Business Hours</h3>
+       <p>Mon - Fri: 9AM - 6PM</p>
+       <p>Saturday: 9AM - 2PM</p>
+       <p>Sunday: Closed</p>
+      </div>
+     </div>
+     <div style="text-align: center; margin-top: 3rem;">
+      <h3 style="color: #6b7d5c; margin-bottom: 1rem;">Follow Us</h3>
+      <div class="social-links" style="justify-content: center;"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <footer>
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KK Wellness Botanics</h3>
+      <p>Your trusted source for premium botanical supplements</p>
+      <div class="social-links"><a href="https://www.instagram.com/kk_wellness_botanics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.tiktok.com/@kk.wellness.botan" target="_blank" rel="noopener noreferrer" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> 081 022 2851</p>
+      <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Business Hours</h3>
+      <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 6PM</p>
+      <p><i class="fas fa-clock"></i> Saturday: 9AM - 2PM</p>
+      <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KK Wellness Botanics. All rights reserved.</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Product Data
+ const products = [
+  {
+    id: 'collagen',
+    name: 'Collagen Powder',
+    price: 349.99,
+    image: 'images/Collagen.png',
+    shortDesc: 'Pure, dissolvable collagen powder to support skin elasticity, joint comfort and strong bones.',
+    fullDesc:
+      'Collagen is the most abundant protein in the body and the “glue” that keeps skin, joints, bones and connective tissue strong. ' +
+      'Our hydrolysed powder mixes easily and is neutral in taste.',
+    howToUse: 'Stir 1–2 teaspoons into coffee, tea, juice or a smoothie once daily.',
+    ingredients: '100 % hydrolysed bovine collagen (type I & III).',
+    benefits:
+      '• Skin hydration & elasticity  \n' +
+      '• Stronger hair & nails  \n' +
+      '• Joint & cartilage support  \n' +
+      '• Bone-density maintenance  \n' +
+      '• Muscle recovery  \n' +
+      '• Gut-lining integrity'
+  },
+  {
+    id: 'soursop',
+    name: 'Soursop Powder',
+    price: 299.99,
+    image: 'images/Soursop.png',
+    shortDesc: 'Tangy-sweet tropical fruit powder rich in vitamin C, antioxidants and digestive fibre.',
+    fullDesc:
+      'Also known as graviola, soursop has been treasured in Caribbean and South-American wellness traditions for its refreshing flavour ' +
+      'and broad spectrum of naturally occurring antioxidants.',
+    howToUse: 'Blend 1 tsp into yoghurt, juice or water; add to cereal or a smoothie.',
+    ingredients: '100 % ripe soursop (Annona muricata) fruit, freeze-dried and milled.',
+    benefits:
+      '• Powerful antioxidant shield  \n' +
+      '• Immune-supporting vitamin C  \n' +
+      '• Gentle digestive fibre  \n' +
+      '• Natural anti-inflammatory  \n' +
+      '• May aid healthy blood-sugar balance  \n' +
+      '• Traditionally used for relaxation & sleep'
+  },
+  {
+    id: 'dandelion',
+    name: 'Dandelion Powder',
+    price: 249.99,
+    image: 'images/Dandelion.png',
+    shortDesc: 'Nutrient-dense “yard weed” that supports liver health, digestion and gentle cleansing.',
+    fullDesc:
+      'Every part of the dandelion plant is edible and loaded with vitamins A, C & K, plus minerals like iron and calcium. ' +
+      'Our powder is made from the whole leaf & root for a broad nutrient profile.',
+    howToUse: 'Whisk ½–1 tsp into warm water, plant milk or a smoothie; sprinkle over food.',
+    ingredients: '100 % organic dandelion leaf & root, finely milled.',
+    benefits:
+      '• Traditional liver & bile support  \n' +
+      '• Mild diuretic – reduces bloating  \n' +
+      '• Digestive-bitter action  \n' +
+      '• Anti-inflammatory polyphenols  \n' +
+      '• Rich in vitamin K, A & C  \n' +
+      '• Antioxidant cell protection'
+  },
+  {
+    id: 'fenugreek',
+    name: 'Fenugreek Powder',
+    price: 229.99,
+    image: 'images/Fenugreek.png',
+    shortDesc: 'Soluble-fibre seed powder that helps steady blood sugar and supports lactation & hormones.',
+    fullDesc:
+      'A staple of Ayurvedic and Mediterranean cooking, fenugreek seeds supply unique soluble fibres (galactomannans) ' +
+      'and phyto-sterols that gently moderate carbohydrate absorption and promote hormonal balance.',
+    howToUse: 'Start with ½ tsp daily in water, porridge or a smoothie; work up to 1 tsp if comfortable.',
+    ingredients: '100 % toasted & ground fenugreek seed (Trigonella foenum-graecum).',
+    benefits:
+      '• Helps stabilise post-meal glucose  \n' +
+      '• Supports milk supply in nursing moms  \n' +
+      '• May balance testosterone & oestrogen  \n' +
+      '• Soothes digestive discomfort  \n' +
+      '• Anti-inflammatory & antioxidant  \n' +
+      '• Can ease menstrual cramps'
+  },
+  {
+    id: 'maca',
+    name: 'Maca Powder',
+    price: 329.99,
+    image: 'images/Maca.png',
+    shortDesc: 'Peruvian “ginseng” root that boosts energy, stamina and hormonal harmony without caffeine.',
+    fullDesc:
+      'Grown at 4 000 m in the Andes, maca is an adaptogenic cruciferous root prized for increasing endurance, libido ' +
+      'and overall vitality while smoothing out hormonal highs and lows.',
+    howToUse: 'Add 1 tsp to oatmeal, smoothies or warm milk; best taken in the morning or pre-workout.',
+    ingredients: '100 % gelatinised yellow, red & black maca blend (Lepidium meyenii).',
+    benefits:
+      '• Clean, caffeine-free energy  \n' +
+      '• Enhances physical stamina  \n' +
+      '• Supports fertility & libido  \n' +
+      '• Eases PMS & menopause symptoms  \n' +
+      '• May improve mood & memory  \n' +
+      '• Packed with vitamin C, copper & iron'
+  },
+  {
+    id: 'ashwagandha',
+    name: 'Ashwagandha Powder',
+    price: 279.99,
+    image: 'images/Ashwagandha.png',
+    shortDesc: 'Premier Ayurvedic adaptogen for stress relief, better sleep and mental clarity.',
+    fullDesc:
+      'Ashwagandha (Withania somnifera) is classified as an adaptogen because it helps normalise cortisol and supports the adrenal system, ' +
+      'making it easier to cope with daily stressors and enjoy deeper sleep.',
+    howToUse: 'Stir 1 tsp into warm water, plant milk or a night-time tonic; add honey or cinnamon to taste.',
+    ingredients: '100 % organic ashwagandha root, dried and finely powdered.',
+    benefits:
+      '• Lowers cortisol & everyday stress  \n' +
+      '• Promotes faster, deeper sleep  \n' +
+      '• Boosts mental focus & reaction time  \n' +
+      '• Supports healthy immunity  \n' +
+      '• May increase muscle strength & recovery  \n' +
+      '• Hormonal & reproductive balance'
+  }
+];
+
+    // State
+    let cartItems = [];
+    let currentProductId = null;
+
+    // Config
+    const defaultConfig = {
+      background_color: '#ffffff',
+      surface_color: '#f5f5dc',
+      text_color: '#2c3e2c',
+      primary_action_color: '#6b7d5c',
+      secondary_action_color: '#d4af37',
+      font_family: 'Georgia',
+      font_size: 16,
+      hero_title: 'Natural Wellness, Naturally You',
+      hero_subtitle: 'Premium botanical supplements for your health journey',
+      about_title: 'About KK Wellness Botanics',
+      about_text: "At KK Wellness Botanics, we believe in the power of nature to support your wellness journey. Our carefully selected range of botanical supplements combines traditional wisdom with modern quality standards. Based in Pretoria, Gauteng, we're committed to providing you with pure, natural products that help you feel your best every day.",
+      products_title: 'Our Premium Products',
+      footer_tagline: 'Your trusted source for premium botanical supplements'
+    };
+
+    let config = { ...defaultConfig };
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      renderProductsHome();
+      initSlider();
+    });
+
+    // Hero Slider
+    let currentSlide = 0;
+    let sliderInterval;
+
+    function initSlider() {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.slider-dot');
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          showSlide(parseInt(dot.dataset.slide));
+          clearInterval(sliderInterval);
+          sliderInterval = setInterval(nextSlide, 5000);
+        });
+      });
+
+      sliderInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Navigation
+    function navigateTo(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(`${page}-page`).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+      document.getElementById('sidebar-overlay').classList.toggle('active');
+    }
+
+    function toggleCart() {
+      document.getElementById('cart-sidebar').classList.toggle('active');
+      document.getElementById('sidebar-overlay').classList.toggle('active');
+    }
+
+    // Products
+    function renderProducts() {
+      const grid = document.getElementById('products-grid');
+      grid.innerHTML = products.map(product => `
+        <div class="product-card" onclick="viewProduct('${product.id}')">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <div class="product-price">R${product.price.toFixed(2)}</div>
+            <p>${product.shortDesc}</p>
+            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('${product.id}')">
+              <i class="fas fa-shopping-bag"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderProductsHome() {
+      const grid = document.getElementById('products-grid-home');
+      grid.innerHTML = products.map(product => `
+        <div class="product-card" onclick="viewProduct('${product.id}')">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <div class="product-price">R${product.price.toFixed(2)}</div>
+            <p>${product.shortDesc}</p>
+            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('${product.id}')">
+              <i class="fas fa-shopping-bag"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function viewProduct(productId) {
+      currentProductId = productId;
+      const product = products.find(p => p.id === productId);
+      
+      const content = document.getElementById('product-detail-content');
+      content.innerHTML = `
+        <div class="product-detail-image">
+          <img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+        </div>
+        <div class="product-detail-info">
+  <h1>${product.name}</h1>
+  <div class="product-detail-price">R${product.price.toFixed(2)}</div>
+  <p class="product-detail-description">${product.fullDesc}</p>
+
+  <!-- NEW: Benefits card -->
+  <div class="product-usage">
+    <h3><i class="fas fa-heart"></i> Key Benefits</h3>
+    <p style="white-space: pre-line">${product.benefits}</p>
+  </div>
+
+  <div class="product-usage">
+    <h3><i class="fas fa-info-circle"></i> How to Use</h3>
+    <p>${product.howToUse}</p>
+  </div>
+
+  <div class="product-usage">
+    <h3><i class="fas fa-leaf"></i> Ingredients</h3>
+    <p>${product.ingredients}</p>
+  </div>
+
+  <div class="quantity-selector">
+    <label>Quantity:</label>
+    <div class="quantity-controls">
+      <button class="quantity-btn" onclick="changeQuantity(-1)">
+        <i class="fas fa-minus"></i>
+      </button>
+      <span class="quantity-value" id="detail-quantity">1</span>
+      <button class="quantity-btn" onclick="changeQuantity(1)">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <button class="add-to-cart-btn" onclick="addToCartFromDetail()" style="font-size: 1.1rem; padding: 1rem 2rem;">
+    <i class="fas fa-shopping-bag"></i> Add to Cart
+  </button>
+</div>
+      `;
+      
+      navigateTo('product-detail');
+    }
+
+    function changeQuantity(delta) {
+      const quantityEl = document.getElementById('detail-quantity');
+      let quantity = parseInt(quantityEl.textContent);
+      quantity = Math.max(1, quantity + delta);
+      quantityEl.textContent = quantity;
+    }
+
+    function addToCartFromDetail() {
+      const quantity = parseInt(document.getElementById('detail-quantity').textContent);
+      addToCart(currentProductId, quantity);
+    }
+
+    // Cart Management with Data SDK
+    const dataHandler = {
+      onDataChanged(data) {
+        cartItems = data;
+        updateCartUI();
+      }
+    };
+
+    // Initialize Data SDK when available
+    async function initializeDataSdk() {
+      if (window.dataSdk) {
+        const result = await window.dataSdk.init(dataHandler);
+        if (!result.isOk) {
+          console.error('Failed to initialize Data SDK');
+        }
+      }
+    }
+
+    // Try to initialize SDK after page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeDataSdk);
+    } else {
+      initializeDataSdk();
+    }
+
+    async function addToCart(productId, quantity = 1) {
+      const product = products.find(p => p.id === productId);
+      
+      if (!window.dataSdk) {
+        // Fallback for local testing without Data SDK
+        const existingItem = cartItems.find(item => item.product_id === productId);
+        
+        if (existingItem) {
+          existingItem.quantity += quantity;
+        } else {
+          cartItems.push({
+            __backendId: 'local_' + Date.now(),
+            product_id: productId,
+            product_name: product.name,
+            quantity: quantity,
+            price: product.price
+          });
+        }
+        
+        updateCartUI();
+        showToast(`${product.name} added to cart!`);
+        return;
+      }
+      
+      const existingItem = cartItems.find(item => item.product_id === productId);
+      
+      if (existingItem) {
+        const updatedItem = {
+          ...existingItem,
+          quantity: existingItem.quantity + quantity
+        };
+        const result = await window.dataSdk.update(updatedItem);
+        
+        if (result.isOk) {
+          showToast(`Updated ${product.name} quantity in cart`);
+        } else {
+          showToast('Failed to update cart');
+        }
+      } else {
+        const newItem = {
+          product_id: productId,
+          product_name: product.name,
+          quantity: quantity,
+          price: product.price
+        };
+        
+        const result = await window.dataSdk.create(newItem);
+        
+        if (result.isOk) {
+          showToast(`${product.name} added to cart!`);
+        } else {
+          showToast('Failed to add to cart');
+        }
+      }
+    }
+
+    async function updateCartQuantity(itemData, delta) {
+      const item = cartItems.find(i => i.__backendId === itemData.__backendId);
+      if (!item) return;
+      
+      const newQuantity = item.quantity + delta;
+      
+      if (newQuantity <= 0) {
+        await removeFromCart(item);
+        return;
+      }
+      
+      if (!window.dataSdk) {
+        // Fallback for local testing
+        item.quantity = newQuantity;
+        updateCartUI();
+        return;
+      }
+      
+      const updatedItem = {
+        ...item,
+        quantity: newQuantity
+      };
+      
+      await window.dataSdk.update(updatedItem);
+    }
+
+    async function removeFromCart(itemData) {
+      const item = cartItems.find(i => i.__backendId === itemData.__backendId);
+      if (!item) return;
+      
+      if (!window.dataSdk) {
+        // Fallback for local testing
+        const index = cartItems.findIndex(i => i.__backendId === itemData.__backendId);
+        if (index > -1) {
+          cartItems.splice(index, 1);
+          updateCartUI();
+          showToast('Item removed from cart');
+        }
+        return;
+      }
+      
+      const result = await window.dataSdk.delete(item);
+      
+      if (result.isOk) {
+        showToast('Item removed from cart');
+      }
+    }
+
+    function updateCartQuantityByIndex(index) {
+      if (index >= 0 && index < cartItems.length) {
+        const itemCopy = { ...cartItems[index] };
+        updateCartQuantity(itemCopy, delta);
+      }
+    }
+
+    function removeFromCartByIndex(index) {
+      if (index >= 0 && index < cartItems.length) {
+        const itemCopy = { ...cartItems[index] };
+        removeFromCart(itemCopy);
+      }
+    }
+
+    function updateCartUI() {
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
+      const mobileCartCount = document.getElementById('mobile-cart-count');
+      const cartFooter = document.getElementById('cart-footer');
+      const cartTotal = document.getElementById('cart-total');
+      
+      const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+      const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      
+      cartCount.textContent = totalItems;
+      if (mobileCartCount) mobileCartCount.textContent = totalItems;
+      
+      if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="cart-empty">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Your cart is empty</p>
+          </div>
+        `;
+        cartFooter.style.display = 'none';
+      } else {
+        cartItemsContainer.innerHTML = cartItems.map((item, index) => {
+          const prod = products.find(p => p.id === item.product_id);
+          return `
+            <div class="cart-item" data-item-index="${index}">
+              <div class="cart-item-icon">
+                <img src="${prod.image}" alt="${prod.name}" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+              </div>
+              <div class="cart-item-details">
+                <div class="cart-item-name">${item.product_name}</div>
+                <div class="cart-item-price">R${item.price.toFixed(2)}</div>
+                <div class="cart-item-quantity">
+                  <button onclick="updateCartQuantityByIndex(${index}, -1)">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <span>${item.quantity}</span>
+                  <button onclick="updateCartQuantityByIndex(${index}, 1)">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <button class="cart-item-remove" onclick="removeFromCartByIndex(${index})">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          `;
+        }).join('');
+        
+        cartTotal.textContent = `R${totalPrice.toFixed(2)}`;
+        cartFooter.style.display = 'block';
+      }
+    }
+
+    function checkoutWhatsApp() {
+      if (cartItems.length === 0) return;
+      
+      let message = 'Hi! I would like to order:\n\n';
+      
+      cartItems.forEach(item => {
+        message += `- ${item.product_name} x${item.quantity} - R${(item.price * item.quantity).toFixed(2)}\n`;
+      });
+      
+      const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      message += `\nTotal: R${total.toFixed(2)}`;
+      
+      const phoneNumber = '27810222851';
+      const encodedMessage = encodeURIComponent(message);
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank', 'noopener,noreferrer');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      
+      toastMessage.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Element SDK
+    async function onConfigChange(newConfig) {
+      const customFont = newConfig.font_family || defaultConfig.font_family;
+      const baseFontStack = 'Georgia, serif';
+      const baseSize = newConfig.font_size || defaultConfig.font_size;
+      
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.body.style.fontSize = `${baseSize}px`;
+      
+      const headers = document.querySelectorAll('header');
+      headers.forEach(header => {
+        header.style.background = newConfig.primary_action_color || defaultConfig.primary_action_color;
+      });
+      
+      const aboutSections = document.querySelectorAll('.about-section');
+      aboutSections.forEach(section => {
+        section.style.background = newConfig.surface_color || defaultConfig.surface_color;
+      });
+      
+      const productsSections = document.querySelectorAll('.products-section');
+      productsSections.forEach(section => {
+        section.style.background = newConfig.background_color || defaultConfig.background_color;
+      });
+      
+      const productCards = document.querySelectorAll('.product-card');
+      productCards.forEach(card => {
+        card.style.background = newConfig.surface_color || defaultConfig.surface_color;
+      });
+      
+      const ctaButtons = document.querySelectorAll('.cta-button');
+      ctaButtons.forEach(button => {
+        button.style.background = newConfig.secondary_action_color || defaultConfig.secondary_action_color;
+        button.style.color = newConfig.text_color || defaultConfig.text_color;
+      });
+      
+      const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
+      addToCartBtns.forEach(button => {
+        button.style.background = newConfig.primary_action_color || defaultConfig.primary_action_color;
+      });
+      
+      const checkoutBtns = document.querySelectorAll('.checkout-btn');
+      checkoutBtns.forEach(button => {
+        button.style.background = newConfig.primary_action_color || defaultConfig.primary_action_color;
+      });
+      
+      document.getElementById('hero-title').textContent = newConfig.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = newConfig.hero_subtitle || defaultConfig.hero_subtitle;
+      
+      const aboutTitleEls = document.querySelectorAll('#about-title, #about-title-preview');
+      aboutTitleEls.forEach(el => {
+        el.textContent = newConfig.about_title || defaultConfig.about_title;
+      });
+      
+      const aboutTextEls = document.querySelectorAll('#about-text, #about-text-preview');
+      aboutTextEls.forEach(el => {
+        el.textContent = newConfig.about_text || defaultConfig.about_text;
+      });
+      
+      document.getElementById('products-title').textContent = newConfig.products_title || defaultConfig.products_title;
+      document.getElementById('products-title-home').textContent = newConfig.products_title || defaultConfig.products_title;
+      
+      const footerTaglineEls = document.querySelectorAll('#footer-tagline');
+      footerTaglineEls.forEach(el => {
+        el.textContent = newConfig.footer_tagline || defaultConfig.footer_tagline;
+      });
+      
+      const headings = document.querySelectorAll('h1, h2, h3');
+      headings.forEach(heading => {
+        const tagMultiplier = heading.tagName === 'H1' ? 2 : heading.tagName === 'H2' ? 1.5 : 1.2;
+        heading.style.fontSize = `${baseSize * tagMultiplier}px`;
+      });
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => {
+                config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['hero_title', config.hero_title || defaultConfig.hero_title],
+          ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+          ['about_title', config.about_title || defaultConfig.about_title],
+          ['about_text', config.about_text || defaultConfig.about_text],
+          ['products_title', config.products_title || defaultConfig.products_title],
+          ['footer_tagline', config.footer_tagline || defaultConfig.footer_tagline]
+        ])
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a28eb7982ce24f0',t:'MTc2MzgxOTY3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
