@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KK Wellness Botanics - Premium Botanical Supplements</title>
 
-<!-- MAIN SEO -->
+  <!-- MAIN SEO -->
 <meta name="title" content="KK Wellness Botanics - Premium Botanical Supplements" />
 <meta name="description" content="Premium botanical supplements including collagen, maca, ashwagandha, soursop, fenugreek, and dandelion. Natural wellness products delivered throughout South Africa." />
 <meta name="keywords" content="KK Wellness Botanics, botanical supplements, collagen powder, maca powder, ashwagandha, soursop, herbal wellness, natural supplements South Africa" />
@@ -48,8 +48,6 @@
 }
 </script>
 
-
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="/_sdk/element_sdk.js"></script>
   <script src="/_sdk/data_sdk.js"></script>
@@ -407,12 +405,17 @@
     .product-image {
       width: 100%;
       aspect-ratio: 1 / 1;
-      background: linear-gradient(135deg, #6b7d5c, #8a9b7a);
+      background: #f5f5dc;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 4rem;
-      color: #f5f5dc;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .product-info {
@@ -494,14 +497,21 @@
     }
 
     .product-detail-image {
-      background: linear-gradient(135deg, #6b7d5c, #8a9b7a);
+      background: #f5f5dc;
       border-radius: 20px;
-      height: 500px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 8rem;
-      color: #f5f5dc;
+      overflow: hidden;
+    }
+
+    .product-detail-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
     }
 
     .product-detail-info h1 {
@@ -575,6 +585,11 @@
     }
 
     .quantity-btn:hover {
+      background: #d4af37;
+      color: #2c3e2c;
+    }
+    
+    .quantity-btn.active {
       background: #d4af37;
       color: #2c3e2c;
     }
@@ -707,14 +722,19 @@
     .cart-item-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(135deg, #6b7d5c, #8a9b7a);
+      background: #f5f5dc;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #f5f5dc;
-      font-size: 1.5rem;
+      overflow: hidden;
       flex-shrink: 0;
+    }
+
+    .cart-item-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .cart-item-details {
@@ -1039,7 +1059,6 @@
       }
 
       .product-detail-image {
-        height: 300px;
         font-size: 5rem;
       }
 
@@ -1053,12 +1072,7 @@
       }
     }
 
-    #shop-page .products-section {
-    margin-top: 120px;
-}
-
-
-/* Testimonials Section */
+    /* Testimonials Section */
 .testimonials-section {
   padding: 5rem 2rem;
   background: #f5f5dc;
@@ -1173,6 +1187,182 @@
     border-radius: 50%;
   }
 }
+
+
+/* -----  BUNDLES SECTION  ----- */
+.bundles-section{
+  padding:5rem 2rem;
+  background:#ffffff;
+}
+.bundles-section .container{
+  max-width:1200px;
+  margin:0 auto;
+}
+.bundles-section h2{
+  font-size:2.5rem;
+  color:#6b7d5c;
+  text-align:center;
+  margin-bottom:1rem;
+}
+.bundles-subtitle{
+  text-align:center;
+  font-size:1.15rem;
+  color:#6b7d5c;
+  margin-bottom:3rem;
+}
+.bundles-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+}
+.bundle-card{
+  background:#f5f5dc;
+  border-radius:15px;
+  padding:2rem;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  transition:transform .3s,box-shadow .3s;
+}
+.bundle-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+.bundle-header{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin-bottom:.75rem;
+}
+.bundle-header i{
+  font-size:1.6rem;
+  color:#d4af37;
+}
+.bundle-header h3{
+  flex:1;
+  font-size:1.35rem;
+  color:#2c3e2c;
+  margin:0;
+}
+.bundle-save{
+  background:#d4af37;
+  color:#2c3e2c;
+  font-weight:bold;
+  font-size:.75rem;
+  padding:.25rem .6rem;
+  border-radius:20px;
+}
+.bundle-for{
+  font-size:.95rem;
+  color:#6b7d5c;
+  margin-bottom:1rem;
+}
+.bundle-contents{
+  list-style:none;
+  padding:0;
+  margin:0 0 1.25rem 0;
+  line-height:1.6;
+  color:#2c3e2c;
+}
+.bundle-contents li:before{
+  content:"✓ ";
+  color:#6b7d5c;
+  font-weight:bold;
+  margin-right:.4rem;
+}
+.bundle-price{
+  font-size:1.5rem;
+  color:#d4af37;
+  font-weight:bold;
+  margin-bottom:1.25rem;
+}
+.bundle-price s{
+  font-size:1rem;
+  color:#8a9b7a;
+  margin-left:.5rem;
+}
+.bundle-btn{
+  background:#6b7d5c;
+  color:#f5f5dc;
+  border:none;
+  border-radius:25px;
+  padding:.8rem 1.5rem;
+  font-size:1rem;
+  cursor:pointer;
+  transition:background .3s;
+  margin-bottom:.75rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+}
+.bundle-btn:hover{
+  background:#d4af37;
+  color:#2c3e2c;
+}
+.bundle-view{
+  text-align:center;
+  font-size:.9rem;
+  color:#6b7d5c;
+  text-decoration:none;
+}
+.bundle-view:hover{
+  color:#d4af37;
+}
+@media(max-width:768px){
+  .bundles-grid{grid-template-columns:1fr}
+}
+
+/* --- keeps every “Add bundle” button aligned --- */
+.bundle-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.bundle-footer{
+  margin-top:auto;   /* pushes footer to bottom */
+  text-align:center;
+}
+
+
+/* ----------  BUNDLE GRID + 1:1 IMAGE  ---------- */
+.bundles-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); /* 3-per-row on desktop */
+  gap:2rem;
+}
+.bundle-card{
+  background:#f5f5dc;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  transition:transform .3s, box-shadow .3s;
+}
+.bundle-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+.bundle-image{
+  width:100%;
+  aspect-ratio:1/1;          /* 1:1 square */
+  overflow:hidden;
+  border-radius:15px 15px 0 0;
+}
+.bundle-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.bundle-body{
+  padding:1.5rem 1.5rem 0;
+  flex:1 0 auto;
+}
+.bundle-footer{
+  padding:0 1.5rem 1.5rem;
+  text-align:center;
+}
+/* (keep all previous bundle-header / bundle-save / bundle-price etc. rules) */
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
@@ -1180,10 +1370,9 @@
  <body><!-- Header -->
   <header>
    <div class="header-content">
-<div class="logo" onclick="navigateTo('home')">
+   <div class="logo" onclick="navigateTo('home')">
   <img src="images/header.png" alt="KK Wellness Botanics Logo" style="height:45px; width:auto;">
 </div>
-
     <nav class="desktop-nav"><a href="#" onclick="navigateTo('home'); return false;">Home</a> <a href="#" onclick="navigateTo('shop'); return false;">Shop</a> <a href="#" onclick="navigateTo('about'); return false;">About</a> <a href="#" onclick="navigateTo('info'); return false;">Policies</a> <a href="#" onclick="navigateTo('contact'); return false;">Contact</a>
      <div class="cart-icon-wrapper" onclick="toggleCart()"><i class="fas fa-shopping-bag"></i> <span class="cart-count" id="cart-count">0</span>
      </div>
@@ -1249,7 +1438,7 @@
     </div>
     <div class="slider-controls"><span class="slider-dot active" data-slide="0"></span> <span class="slider-dot" data-slide="1"></span> <span class="slider-dot" data-slide="2"></span>
     </div>
-   </section>
+   </section><!-- Products Preview on Home -->
 
 <section class="about-section">
     <div class="container">
@@ -1267,7 +1456,151 @@
     </div>
    </section><!-- About Preview -->
 
+<!-- ==========  BUNDLES SECTION  ========== -->
+<section class="bundles-section">
+  <div class="container">
+    <h2>Wellness Bundle Deals</h2>
+    <p class="bundles-subtitle">Curated pairs that work better together – save when you shop the bundle.</p>
 
+    <div class="bundles-grid">   <!-- same grid as products -->
+
+      <!-- 1. Glow & Beauty -->
+      <div class="bundle-card" data-bundle="glow">
+        <div class="bundle-image">
+          <!-- 1:1 image – swap src or drop file in images/ folder -->
+          <img src="images/bundle-glow.jpg" alt="Glow & Beauty Bundle">
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-header">
+            <i class="fas fa-sparkles"></i>
+            <h3>Glow & Beauty Bundle</h3>
+            <span class="bundle-save">Save R20</span>
+          </div>
+          <p class="bundle-for">Best for: skin, hair, nails & anti-aging</p>
+          <ul class="bundle-contents">
+            <li>Collagen 100 g</li>
+            <li>Fenugreek 100 g</li>
+          </ul>
+        </div>
+        <div class="bundle-footer">
+          <p class="bundle-price">R210 <s>R230</s></p>
+          <button class="bundle-btn" onclick="addBundle('collagen','fenugreek')">
+            <i class="fas fa-shopping-bag"></i> Add bundle to cart
+          </button>
+          <a class="bundle-view" href="#" onclick="navigateTo('shop');return false;">View individual products →</a>
+        </div>
+      </div>
+
+      <!-- 2. Immunity & Detox -->
+      <div class="bundle-card" data-bundle="immunity">
+        <div class="bundle-image">
+          <img src="images/bundle-immunity.jpg" alt="Immunity & Detox Bundle">
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-header">
+            <i class="fas fa-shield-virus"></i>
+            <h3>Immunity & Detox Bundle</h3>
+            <span class="bundle-save">Save R30</span>
+          </div>
+          <p class="bundle-for">Best for: cleansing, inflammation & immune support</p>
+          <ul class="bundle-contents">
+            <li>Soursop 100 g</li>
+            <li>Dandelion 100 g</li>
+          </ul>
+        </div>
+        <div class="bundle-footer">
+          <p class="bundle-price">R360 <s>R390</s></p>
+          <button class="bundle-btn" onclick="addBundle('soursop','dandelion')">
+            <i class="fas fa-shopping-bag"></i> Add bundle to cart
+          </button>
+          <a class="bundle-view" href="#" onclick="navigateTo('shop');return false;">View individual products →</a>
+        </div>
+      </div>
+
+      <!-- 3. Hormone Harmony -->
+      <div class="bundle-card" data-bundle="hormone">
+        <div class="bundle-image">
+          <img src="images/bundle-hormone.jpg" alt="Hormone Harmony Bundle">
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-header">
+            <i class="fas fa-venus"></i>
+            <h3>Hormone Harmony Bundle</h3>
+            <span class="bundle-save">Save R20</span>
+          </div>
+          <p class="bundle-for">Best for: women’s health, PMS & mood balance</p>
+          <ul class="bundle-contents">
+            <li>Ashwagandha 100 g</li>
+            <li>Fenugreek 100 g</li>
+          </ul>
+        </div>
+        <div class="bundle-footer">
+          <p class="bundle-price">R170 <s>R190</s></p>
+          <button class="bundle-btn" onclick="addBundle('ashwagandha','fenugreek')">
+            <i class="fas fa-shopping-bag"></i> Add bundle to cart
+          </button>
+          <a class="bundle-view" href="#" onclick="navigateTo('shop');return false;">View individual products →</a>
+        </div>
+      </div>
+
+      <!-- 4. Anti-Stress & Calm -->
+      <div class="bundle-card" data-bundle="calm">
+        <div class="bundle-image">
+          <img src="images/bundle-calm.jpg" alt="Anti-Stress & Calm Bundle">
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-header">
+            <i class="fas fa-cloud-moon"></i>
+            <h3>Anti-Stress & Calm Bundle</h3>
+            <span class="bundle-save">Save R25</span>
+          </div>
+          <p class="bundle-for">Best for: stress relief, sleep & mental clarity</p>
+          <ul class="bundle-contents">
+            <li>Ashwagandha 100 g</li>
+            <li>Soursop 100 g</li>
+          </ul>
+        </div>
+        <div class="bundle-footer">
+          <p class="bundle-price">R335 <s>R360</s></p>
+          <button class="bundle-btn" onclick="addBundle('ashwagandha','soursop')">
+            <i class="fas fa-shopping-bag"></i> Add bundle to cart
+          </button>
+          <a class="bundle-view" href="#" onclick="navigateTo('shop');return false;">View individual products →</a>
+        </div>
+      </div>
+
+      <!-- 5. Total Body Wellness -->
+      <div class="bundle-card" data-bundle="total">
+        <div class="bundle-image">
+          <img src="images/bundle-total.jpg" alt="Total Body Wellness Bundle">
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-header">
+            <i class="fas fa-heart-pulse"></i>
+            <h3>Total Body Wellness Bundle</h3>
+            <span class="bundle-save">Save R40</span>
+          </div>
+          <p class="bundle-for">Best for: everyday vitality & full-body support</p>
+          <ul class="bundle-contents">
+            <li>Collagen 100 g</li>
+            <li>Ashwagandha 100 g</li>
+            <li>Dandelion 100 g</li>
+          </ul>
+        </div>
+        <div class="bundle-footer">
+          <p class="bundle-price">R415 <s>R455</s></p>
+          <button class="bundle-btn" onclick="addBundle('collagen','ashwagandha','dandelion')">
+            <i class="fas fa-shopping-bag"></i> Add bundle to cart
+          </button>
+          <a class="bundle-view" href="#" onclick="navigateTo('shop');return false;">View individual products →</a>
+        </div>
+      </div>
+
+    </div><!-- /.bundles-grid -->
+  </div><!-- /.container -->
+</section>
+<!-- ==========  END BUNDLES  ========== -->
+  
    <!-- Testimonials Section -->
 <section class="testimonials-section">
   <div class="container">
@@ -1278,7 +1611,7 @@
         <strong>- Thandi M.</strong>
       </div>
       <div class="testimonial-card">
-        <p>“The soursop capsules are amazing! I take them daily and they’ve become a key part of my wellness routine. Highly recommend KK Wellness Botanics.”</p>
+        <p>“The soursop powder is amazing! I mix it into my smoothies every day, and it’s become an essential part of my wellness routine. Highly recommend KK Wellness Botanics.”</p>
         <strong>- Johan P.</strong>
       </div>
       <div class="testimonial-card">
@@ -1288,7 +1621,7 @@
     </div>
   </div>
 </section>
-   
+
    <footer>
     <div class="footer-content">
      <div class="footer-section">
@@ -1301,7 +1634,7 @@
       <h3>Contact Us</h3>
       <p><i class="fas fa-phone"></i> 081 022 2851</p>
       <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
-      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> Shop no: 62 EN AND T Containers Market, Pretoria</p>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
@@ -1337,7 +1670,7 @@
       <h3>Contact Us</h3>
       <p><i class="fas fa-phone"></i> 081 022 2851</p>
       <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
-      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> Shop no: 62 EN AND T Containers Market, Pretoria</p>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
@@ -1372,7 +1705,7 @@
       <h3>Contact Us</h3>
       <p><i class="fas fa-phone"></i> 081 022 2851</p>
       <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
-      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> Shop no: 62 EN AND T Containers Market, Pretoria</p>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
@@ -1393,11 +1726,10 @@
    <section class="about-section" style="padding-top: 8rem; min-height: 100%;">
     <div class="container">
 
-   <!-- Transparent Logo -->
+         <!-- Transparent Logo -->
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img src="images/body.png" alt="KK Wellness Botanics Logo" style="max-width: 200px; width: 100%; height: auto; opacity: 0.9;">
 </div>
-    
 
      <h2 id="about-title">About KK Wellness Botanics</h2>
      <p id="about-text">At KK Wellness Botanics, we believe in the power of nature to support your wellness journey. Our carefully selected range of botanical supplements combines traditional wisdom with modern quality standards. Based in Pretoria, Gauteng, we're committed to providing you with pure, natural products that help you feel your best every day.</p>
@@ -1429,7 +1761,7 @@
       <h3>Contact Us</h3>
       <p><i class="fas fa-phone"></i> 081 022 2851</p>
       <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
-      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> Shop no: 62 EN AND T Containers Market, Pretoria</p>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
@@ -1545,7 +1877,7 @@
       <h3>Contact Us</h3>
       <p><i class="fas fa-phone"></i> 081 022 2851</p>
       <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
-      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> Shop no: 62 EN AND T Containers Market, Pretoria</p>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
@@ -1578,8 +1910,8 @@
       </div>
       <div class="contact-card"><i class="fas fa-map-marker-alt"></i>
        <h3>Location</h3>
-       <p>Pretoria</p>
-       <p>Gauteng, South Africa</p>
+       <p>Shop no: 62 EN AND T Containers Market</p>
+       <p>Pretoria, Gauteng, South Africa</p>
       </div>
       <div class="contact-card"><i class="fas fa-clock"></i>
        <h3>Business Hours</h3>
@@ -1607,7 +1939,7 @@
       <h3>Contact Us</h3>
       <p><i class="fas fa-phone"></i> 081 022 2851</p>
       <p><i class="fab fa-whatsapp"></i> +27 81 022 2851</p>
-      <p><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> Shop no: 62 EN AND T Containers Market, Pretoria</p>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3><a href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a> <a href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a> <a href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a> <a href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
@@ -1626,122 +1958,110 @@
   </div>
   <script>
     // Product Data
- const products = [
+const products = [
   {
     id: 'collagen',
     name: 'Collagen Powder',
-    price: 349.99,
+    prices: { '100g': 180, '200g': 350 },
+    icon: 'fas fa-mortar-pestle',
     image: 'images/Collagen.png',
-    shortDesc: 'Pure, dissolvable collagen powder to support skin elasticity, joint comfort and strong bones.',
-    fullDesc:
-      'Collagen is the most abundant protein in the body and the “glue” that keeps skin, joints, bones and connective tissue strong. ' +
-      'Our hydrolysed powder mixes easily and is neutral in taste.',
-    howToUse: 'Stir 1–2 teaspoons into coffee, tea, juice or a smoothie once daily.',
-    ingredients: '100 % hydrolysed bovine collagen (type I & III).',
-    benefits:
-      '• Skin hydration & elasticity  \n' +
-      '• Stronger hair & nails  \n' +
-      '• Joint & cartilage support  \n' +
-      '• Bone-density maintenance  \n' +
-      '• Muscle recovery  \n' +
-      '• Gut-lining integrity'
+    shortDesc: 'A pure collagen powder that blends easily into drinks and daily wellness routines.',
+    fullDesc: 'A pure collagen powder traditionally enjoyed as part of beauty and wellness practices. It mixes easily into beverages and can be used as part of a daily routine.',
+    benefits: [
+      'Traditionally used to support healthy-looking skin',
+      'Commonly incorporated for hair and nail wellness',
+      'Easy addition to daily beauty and wellness routines'
+    ],
+    howToUse: 'Mix 1–2 teaspoons into water, smoothies, tea, or your preferred beverage.',
+    ingredients: '100% pure collagen powder.'
   },
-  {
-    id: 'soursop',
-    name: 'Soursop Powder',
-    price: 299.99,
-    image: 'images/Soursop.png',
-    shortDesc: 'Tangy-sweet tropical fruit powder rich in vitamin C, antioxidants and digestive fibre.',
-    fullDesc:
-      'Also known as graviola, soursop has been treasured in Caribbean and South-American wellness traditions for its refreshing flavour ' +
-      'and broad spectrum of naturally occurring antioxidants.',
-    howToUse: 'Blend 1 tsp into yoghurt, juice or water; add to cereal or a smoothie.',
-    ingredients: '100 % ripe soursop (Annona muricata) fruit, freeze-dried and milled.',
-    benefits:
-      '• Powerful antioxidant shield  \n' +
-      '• Immune-supporting vitamin C  \n' +
-      '• Gentle digestive fibre  \n' +
-      '• Natural anti-inflammatory  \n' +
-      '• May aid healthy blood-sugar balance  \n' +
-      '• Traditionally used for relaxation & sleep'
-  },
-  {
-    id: 'dandelion',
-    name: 'Dandelion Powder',
-    price: 249.99,
-    image: 'images/Dandelion.png',
-    shortDesc: 'Nutrient-dense “yard weed” that supports liver health, digestion and gentle cleansing.',
-    fullDesc:
-      'Every part of the dandelion plant is edible and loaded with vitamins A, C & K, plus minerals like iron and calcium. ' +
-      'Our powder is made from the whole leaf & root for a broad nutrient profile.',
-    howToUse: 'Whisk ½–1 tsp into warm water, plant milk or a smoothie; sprinkle over food.',
-    ingredients: '100 % organic dandelion leaf & root, finely milled.',
-    benefits:
-      '• Traditional liver & bile support  \n' +
-      '• Mild diuretic – reduces bloating  \n' +
-      '• Digestive-bitter action  \n' +
-      '• Anti-inflammatory polyphenols  \n' +
-      '• Rich in vitamin K, A & C  \n' +
-      '• Antioxidant cell protection'
-  },
-  {
-    id: 'fenugreek',
-    name: 'Fenugreek Powder',
-    price: 229.99,
-    image: 'images/Fenugreek.png',
-    shortDesc: 'Soluble-fibre seed powder that helps steady blood sugar and supports lactation & hormones.',
-    fullDesc:
-      'A staple of Ayurvedic and Mediterranean cooking, fenugreek seeds supply unique soluble fibres (galactomannans) ' +
-      'and phyto-sterols that gently moderate carbohydrate absorption and promote hormonal balance.',
-    howToUse: 'Start with ½ tsp daily in water, porridge or a smoothie; work up to 1 tsp if comfortable.',
-    ingredients: '100 % toasted & ground fenugreek seed (Trigonella foenum-graecum).',
-    benefits:
-      '• Helps stabilise post-meal glucose  \n' +
-      '• Supports milk supply in nursing moms  \n' +
-      '• May balance testosterone & oestrogen  \n' +
-      '• Soothes digestive discomfort  \n' +
-      '• Anti-inflammatory & antioxidant  \n' +
-      '• Can ease menstrual cramps'
-  },
+
   {
     id: 'maca',
     name: 'Maca Powder',
-    price: 329.99,
+    prices: { '100g': 110, '200g': 210 },
+    icon: 'fas fa-mountain',
     image: 'images/Maca.png',
-    shortDesc: 'Peruvian “ginseng” root that boosts energy, stamina and hormonal harmony without caffeine.',
-    fullDesc:
-      'Grown at 4 000 m in the Andes, maca is an adaptogenic cruciferous root prized for increasing endurance, libido ' +
-      'and overall vitality while smoothing out hormonal highs and lows.',
-    howToUse: 'Add 1 tsp to oatmeal, smoothies or warm milk; best taken in the morning or pre-workout.',
-    ingredients: '100 % gelatinised yellow, red & black maca blend (Lepidium meyenii).',
-    benefits:
-      '• Clean, caffeine-free energy  \n' +
-      '• Enhances physical stamina  \n' +
-      '• Supports fertility & libido  \n' +
-      '• Eases PMS & menopause symptoms  \n' +
-      '• May improve mood & memory  \n' +
-      '• Packed with vitamin C, copper & iron'
+    shortDesc: 'A natural maca root powder with a long history of traditional use in daily nourishment.',
+    fullDesc: 'A naturally grounding maca powder widely known for its traditional use in supporting vitality and balance. It blends easily into smoothies and foods.',
+    benefits: [
+      'Traditionally used to support natural energy',
+      'Commonly enjoyed for vitality and balance',
+      'Popular addition to smoothies and wellness blends'
+    ],
+    howToUse: 'Mix 1 teaspoon into smoothies, porridge, yoghurt, or warm drinks.',
+    ingredients: 'Pure maca root powder.'
   },
+
   {
     id: 'ashwagandha',
     name: 'Ashwagandha Powder',
-    price: 279.99,
+    prices: { '100g': 130, '200g': 250 },
+    icon: 'fas fa-om',
     image: 'images/Ashwagandha.png',
-    shortDesc: 'Premier Ayurvedic adaptogen for stress relief, better sleep and mental clarity.',
-    fullDesc:
-      'Ashwagandha (Withania somnifera) is classified as an adaptogen because it helps normalise cortisol and supports the adrenal system, ' +
-      'making it easier to cope with daily stressors and enjoy deeper sleep.',
-    howToUse: 'Stir 1 tsp into warm water, plant milk or a night-time tonic; add honey or cinnamon to taste.',
-    ingredients: '100 % organic ashwagandha root, dried and finely powdered.',
-    benefits:
-      '• Lowers cortisol & everyday stress  \n' +
-      '• Promotes faster, deeper sleep  \n' +
-      '• Boosts mental focus & reaction time  \n' +
-      '• Supports healthy immunity  \n' +
-      '• May increase muscle strength & recovery  \n' +
-      '• Hormonal & reproductive balance'
+    shortDesc: 'A traditional herb used for centuries in calming and grounding wellness practices.',
+    fullDesc: 'A well-known adaptogenic herb traditionally used to promote relaxation and emotional balance. Easily mixed into warm drinks as part of a calming routine.',
+    benefits: [
+      'Traditionally used to promote relaxation',
+      'Commonly incorporated to support calm and balance',
+      'Popular in grounding and stress-management rituals'
+    ],
+    howToUse: 'Mix 1 teaspoon into warm milk, tea, or your preferred beverage.',
+    ingredients: 'Pure ashwagandha powder.'
+  },
+
+  {
+    id: 'soursop',
+    name: 'Soursop Powder',
+    prices: { '100g': 230, '200g': 450 },
+    icon: 'fas fa-leaf',
+    image: 'images/Soursop.png',
+    shortDesc: 'A flavourful soursop fruit powder traditionally used in various wellness practices.',
+    fullDesc: 'A naturally fruity soursop powder valued in many cultures for its unique flavour and traditional wellness use. Easy to add to drinks or smoothies.',
+    benefits: [
+      'Valued in traditional natural wellness practices',
+      'Well-known for its natural plant properties',
+      'A flavourful addition to health and smoothie routines'
+    ],
+    howToUse: 'Mix 1 teaspoon into water, smoothies, or tea. Can also be used in homemade capsules.',
+    ingredients: 'Pure soursop fruit powder.'
+  },
+
+  {
+    id: 'dandelion',
+    name: 'Dandelion Powder',
+    prices: { '100g': 150, '200g': 290 },
+    icon: 'fas fa-seedling',
+    image: 'images/Dandelion.png',
+    shortDesc: 'A natural dandelion root powder commonly enjoyed in teas and blends.',
+    fullDesc: 'A grounding dandelion powder traditionally enjoyed for digestive wellness and cleansing practices. Works well in warm drinks or smoothies.',
+    benefits: [
+      'Traditionally used to support digestive wellness',
+      'Common in herbal cleansing traditions',
+      'Smooth, earthy addition to daily wellness practices'
+    ],
+    howToUse: 'Add 1 teaspoon to warm water, tea, smoothies, or capsules.',
+    ingredients: 'Pure dandelion root powder.'
+  },
+
+  {
+    id: 'fenugreek',
+    name: 'Fenugreek Powder',
+    prices: { '100g': 50, '200g': 90 },
+    icon: 'fas fa-spa',
+    image: 'images/Fenugreek.png',
+    shortDesc: 'A versatile fenugreek powder widely used in traditional wellness practices.',
+    fullDesc: 'A natural fenugreek seed powder known for its long history of use in cultural wellness and nourishment. Easy to include in drinks or food preparations.',
+    benefits: [
+      'Traditionally used to support overall wellbeing',
+      'Common in herbal and culinary traditions',
+      'Versatile for both food and wellness routines'
+    ],
+    howToUse: 'Take ½–1 teaspoon daily in warm water, smoothies, or capsules.',
+    ingredients: 'Pure fenugreek seed powder.'
   }
 ];
+
 
     // State
     let cartItems = [];
@@ -1829,14 +2149,14 @@
       grid.innerHTML = products.map(product => `
         <div class="product-card" onclick="viewProduct('${product.id}')">
           <div class="product-image">
-            <img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+            <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'${product.icon}\\'></i>';">
           </div>
           <div class="product-info">
             <h3>${product.name}</h3>
-            <div class="product-price">R${product.price.toFixed(2)}</div>
+            <div class="product-price">R${product.prices['100g'].toFixed(2)} - R${product.prices['200g'].toFixed(2)}</div>
             <p>${product.shortDesc}</p>
-            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('${product.id}')">
-              <i class="fas fa-shopping-bag"></i> Add to Cart
+            <button class="add-to-cart-btn" onclick="event.stopPropagation(); viewProduct('${product.id}')">
+              <i class="fas fa-shopping-bag"></i> Select Size
             </button>
           </div>
         </div>
@@ -1848,14 +2168,14 @@
       grid.innerHTML = products.map(product => `
         <div class="product-card" onclick="viewProduct('${product.id}')">
           <div class="product-image">
-            <img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+            <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'${product.icon}\\'></i>';">
           </div>
           <div class="product-info">
             <h3>${product.name}</h3>
-            <div class="product-price">R${product.price.toFixed(2)}</div>
+            <div class="product-price">R${product.prices['100g'].toFixed(2)} - R${product.prices['200g'].toFixed(2)}</div>
             <p>${product.shortDesc}</p>
-            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('${product.id}')">
-              <i class="fas fa-shopping-bag"></i> Add to Cart
+            <button class="add-to-cart-btn" onclick="event.stopPropagation(); viewProduct('${product.id}')">
+              <i class="fas fa-shopping-bag"></i> Select Size
             </button>
           </div>
         </div>
@@ -1868,50 +2188,85 @@
       
       const content = document.getElementById('product-detail-content');
       content.innerHTML = `
-        <div class="product-detail-image">
-          <img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+        <div>
+          <div class="product-detail-image">
+            <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'${product.icon}\\'></i>';">
+          </div>
+          
+          <div class="product-detail-price" id="selected-price" style="text-align: center; margin: 2rem 0 1.5rem 0;">R${product.prices['100g'].toFixed(2)}</div>
+          
+          <div class="quantity-selector" style="justify-content: center; margin-bottom: 1rem;">
+            <label>Size:</label>
+            <div class="quantity-controls">
+              <button class="quantity-btn ${true ? 'active' : ''}" id="size-100g" onclick="selectSize('100g')" style="width: auto; padding: 0.5rem 1rem; border-radius: 25px;">
+                100g
+              </button>
+              <button class="quantity-btn" id="size-200g" onclick="selectSize('200g')" style="width: auto; padding: 0.5rem 1rem; border-radius: 25px;">
+                200g
+              </button>
+            </div>
+          </div>
+          
+          <div class="quantity-selector" style="justify-content: center; margin-bottom: 1.5rem;">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <button class="quantity-btn" onclick="changeQuantity(-1)">
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="quantity-value" id="detail-quantity">1</span>
+              <button class="quantity-btn" onclick="changeQuantity(1)">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          
+          <button class="add-to-cart-btn" onclick="addToCartFromDetail()" style="font-size: 1.1rem; padding: 1rem 2rem;">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
         </div>
+        
         <div class="product-detail-info">
-  <h1>${product.name}</h1>
-  <div class="product-detail-price">R${product.price.toFixed(2)}</div>
-  <p class="product-detail-description">${product.fullDesc}</p>
+          <h1>${product.name}</h1>
+          <p class="product-detail-description">${product.fullDesc}</p>
+          
+          <div class="product-usage">
+            <h3><i class="fas fa-star"></i> Benefits</h3>
+            <ul style="list-style: none; padding-left: 0;">
+              ${product.benefits.map(benefit => `
+                <li style="padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                  <i class="fas fa-check-circle" style="color: #6b7d5c; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>${benefit}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+          
+          <div class="product-usage">
+            <h3><i class="fas fa-info-circle"></i> How to Use</h3>
+            <p>${product.howToUse}</p>
+          </div>
 
-  <!-- NEW: Benefits card -->
-  <div class="product-usage">
-    <h3><i class="fas fa-heart"></i> Key Benefits</h3>
-    <p style="white-space: pre-line">${product.benefits}</p>
-  </div>
-
-  <div class="product-usage">
-    <h3><i class="fas fa-info-circle"></i> How to Use</h3>
-    <p>${product.howToUse}</p>
-  </div>
-
-  <div class="product-usage">
-    <h3><i class="fas fa-leaf"></i> Ingredients</h3>
-    <p>${product.ingredients}</p>
-  </div>
-
-  <div class="quantity-selector">
-    <label>Quantity:</label>
-    <div class="quantity-controls">
-      <button class="quantity-btn" onclick="changeQuantity(-1)">
-        <i class="fas fa-minus"></i>
-      </button>
-      <span class="quantity-value" id="detail-quantity">1</span>
-      <button class="quantity-btn" onclick="changeQuantity(1)">
-        <i class="fas fa-plus"></i>
-      </button>
-    </div>
-  </div>
-
-  <button class="add-to-cart-btn" onclick="addToCartFromDetail()" style="font-size: 1.1rem; padding: 1rem 2rem;">
-    <i class="fas fa-shopping-bag"></i> Add to Cart
-  </button>
-</div>
+          <div class="product-usage">
+            <h3><i class="fas fa-leaf"></i> Ingredients</h3>
+            <p>${product.ingredients}</p>
+          </div>
+        </div>
       `;
       
       navigateTo('product-detail');
+    }
+    
+    let selectedSize = '100g';
+    
+    function selectSize(size) {
+      selectedSize = size;
+      const product = products.find(p => p.id === currentProductId);
+      
+      document.getElementById('selected-price').textContent = `R${product.prices[size].toFixed(2)}`;
+      
+      document.getElementById('size-100g').classList.remove('active');
+      document.getElementById('size-200g').classList.remove('active');
+      document.getElementById(`size-${size}`).classList.add('active');
     }
 
     function changeQuantity(delta) {
@@ -1923,7 +2278,7 @@
 
     function addToCartFromDetail() {
       const quantity = parseInt(document.getElementById('detail-quantity').textContent);
-      addToCart(currentProductId, quantity);
+      addToCart(currentProductId, selectedSize, quantity);
     }
 
     // Cart Management with Data SDK
@@ -1951,12 +2306,13 @@
       initializeDataSdk();
     }
 
-    async function addToCart(productId, quantity = 1) {
+    async function addToCart(productId, size, quantity = 1) {
       const product = products.find(p => p.id === productId);
+      const price = product.prices[size];
       
       if (!window.dataSdk) {
         // Fallback for local testing without Data SDK
-        const existingItem = cartItems.find(item => item.product_id === productId);
+        const existingItem = cartItems.find(item => item.product_id === productId && item.size === size);
         
         if (existingItem) {
           existingItem.quantity += quantity;
@@ -1965,17 +2321,18 @@
             __backendId: 'local_' + Date.now(),
             product_id: productId,
             product_name: product.name,
+            size: size,
             quantity: quantity,
-            price: product.price
+            price: price
           });
         }
         
         updateCartUI();
-        showToast(`${product.name} added to cart!`);
+        showToast(`${product.name} (${size}) added to cart!`);
         return;
       }
       
-      const existingItem = cartItems.find(item => item.product_id === productId);
+      const existingItem = cartItems.find(item => item.product_id === productId && item.size === size);
       
       if (existingItem) {
         const updatedItem = {
@@ -1985,7 +2342,7 @@
         const result = await window.dataSdk.update(updatedItem);
         
         if (result.isOk) {
-          showToast(`Updated ${product.name} quantity in cart`);
+          showToast(`Updated ${product.name} (${size}) quantity in cart`);
         } else {
           showToast('Failed to update cart');
         }
@@ -1993,14 +2350,15 @@
         const newItem = {
           product_id: productId,
           product_name: product.name,
+          size: size,
           quantity: quantity,
-          price: product.price
+          price: price
         };
         
         const result = await window.dataSdk.create(newItem);
         
         if (result.isOk) {
-          showToast(`${product.name} added to cart!`);
+          showToast(`${product.name} (${size}) added to cart!`);
         } else {
           showToast('Failed to add to cart');
         }
@@ -2096,10 +2454,10 @@
           return `
             <div class="cart-item" data-item-index="${index}">
               <div class="cart-item-icon">
-                <img src="${prod.image}" alt="${prod.name}" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                <img src="${prod.image}" alt="${prod.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'${prod.icon}\\'></i>';">
               </div>
               <div class="cart-item-details">
-                <div class="cart-item-name">${item.product_name}</div>
+                <div class="cart-item-name">${item.product_name} (${item.size})</div>
                 <div class="cart-item-price">R${item.price.toFixed(2)}</div>
                 <div class="cart-item-quantity">
                   <button onclick="updateCartQuantityByIndex(${index}, -1)">
@@ -2129,7 +2487,7 @@
       let message = 'Hi! I would like to order:\n\n';
       
       cartItems.forEach(item => {
-        message += `- ${item.product_name} x${item.quantity} - R${(item.price * item.quantity).toFixed(2)}\n`;
+        message += `- ${item.product_name} (${item.size}) x${item.quantity} - R${(item.price * item.quantity).toFixed(2)}\n`;
       });
       
       const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -2293,9 +2651,16 @@
         ])
       });
     }
+
+    // ----------  BUNDLE LOGIC  ----------
+// Accepts 2 or 3 product ids and adds 100 g of each to cart
+async function addBundle(...ids){
+  ids.forEach(id => addToCart(id,'100g',1));
+  showToast('Bundle added to cart!');
+}
   </script>
-  <!-- Add this right before the closing </body> tag -->
-<div class="whatsapp-float" onclick="window.open('https://wa.me/27810222851?text=Hi!%20I%20need%20some%20help%20with%20your%20products.', '_blank')">
+
+  <div class="whatsapp-float" onclick="window.open('https://wa.me/27810222851?text=Hi!%20I%20need%20some%20help%20with%20your%20products.', '_blank')">
   <i class="fab fa-whatsapp"></i>
   <span class="whatsapp-text">Need help?</span>
 </div>
